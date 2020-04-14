@@ -1,5 +1,4 @@
 #!/bin/bash
-# https://launchpad.net/cubic
 
 set -v on
 set -u
