@@ -63,7 +63,7 @@ fi
 sudo dpkg -i ./bellsoft-jdk.deb
 
 # install CMake (https://apt.kitware.com/)
-CMAKE_VERSION="3.17.1-0kitware1"
+CMAKE_VERSION="3.17.2-0kitware1"
 if [ ! -f ./cmake-data.deb ]; then
     wget -O cmake-data.deb "https://apt.kitware.com/ubuntu/pool/main/c/cmake/cmake-data_${CMAKE_VERSION}_all.deb"
 fi
@@ -74,7 +74,7 @@ sudo dpkg -i ./cmake-data.deb
 sudo dpkg -i ./cmake.deb
 
 # install Gradle (https://gradle.org/releases/)
-GRALDE_VERSION="6.3"
+GRALDE_VERSION="6.4.1"
 if [ ! -f /usr/bin/gradle ]; then
     if [ ! -f ./gradle.zip ]; then
         wget -O gradle.zip "https://services.gradle.org/distributions/gradle-${GRALDE_VERSION}-all.zip"
