@@ -56,7 +56,7 @@ sudo apt update && sudo apt install -y typora
 
 
 # install Liberica JDK 11 (https://bell-sw.com/pages/java-11/)
-LIBERICA_JDK_VERSION="11.0.6+10"
+LIBERICA_JDK_VERSION="11.0.11+9"
 if [ ! -f ./bellsoft-jdk.deb ]; then
     wget -O bellsoft-jdk.deb http://download.bell-sw.com/java/${LIBERICA_JDK_VERSION}/bellsoft-jdk${LIBERICA_JDK_VERSION}-linux-amd64-full.deb
 fi
