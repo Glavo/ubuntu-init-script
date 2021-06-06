@@ -74,7 +74,7 @@ sudo dpkg -i ./cmake-data.deb
 sudo dpkg -i ./cmake.deb
 
 # install Gradle (https://gradle.org/releases/)
-GRALDE_VERSION="6.4.1"
+GRALDE_VERSION="7.0.2"
 if [ ! -f /usr/bin/gradle ]; then
     if [ ! -f ./gradle.zip ]; then
         wget -O gradle.zip "https://services.gradle.org/distributions/gradle-${GRALDE_VERSION}-all.zip"
