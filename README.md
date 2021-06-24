@@ -24,7 +24,7 @@
 
 * 安装 git, curl, pip, p7zip 等常用工具
 
-* 安装 [vscodium](https://vscodium.com/)（第三方提供的 Visual Studio Code 构建，与微软提供的 vscode 构建基本一致，但是是以 MIT 协议发布的二进制文件）
+* 安装 [vscode](https://code.visualstudio.com/)
 
 * 安装 [typora](https://typora.io)，一个所见即所得的 markdown 编辑器
 
