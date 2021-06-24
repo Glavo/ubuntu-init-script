@@ -42,12 +42,15 @@ if [ ! -f ./deepin.com.wechat.deb ]; then
 fi
 sudo apt install -y ./deepin.com.wechat.deb
 
-# install vscodium (https://vscodium.com/)
-if [ ! -f /etc/apt/sources.list.d/vscodium.list ]; then
-    wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg | sudo apt-key add -
-    echo 'deb https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/repos/debs/ vscodium main' | sudo tee --append /etc/apt/sources.list.d/vscodium.list
+# install vscode (https://code.visualstudio.com/)
+if [ ! -f /etc/apt/sources.list.d/vscode.list ]; then
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+    sudo install -o root -g root -m 644 packages.microsoft.gpg /etc/apt/trusted.gpg.d/
+    sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/trusted.gpg.d/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+    rm -f packages.microsoft.gpg
 fi
-sudo apt update && sudo apt install -y codium
+sudo apt install -y apt-transport-https
+sudo apt update && sudo apt install -y code
 
 # install typora (https://typora.io/#linux)
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
